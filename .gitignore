@@ -42,7 +42,9 @@ app-example
 /ios
 /android
 
-# Dados locais do Back4App (nunca enviar credenciais)
-.env
-.env.*
-!.env.example
+# Somente os IDs/chaves públicas do cliente Expo ficam no .env versionado.
+# Nunca versionar outras credenciais, REST API Key ou Master Key.
+.env.local
+.env.*.local
+.env.secret
+.env.secrets

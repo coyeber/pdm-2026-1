@@ -14,17 +14,12 @@ Aplicativo React Native + Expo Router + TypeScript que utiliza a classe `_User` 
 ## Como executar
 
 1. Tenha o Node.js instalado. Dentro da pasta do projeto, execute `npm install`.
-2. Crie uma aplicação no [Back4App](https://www.back4app.com/).
-3. No painel, abra **App Settings > Security & Keys** e copie o **Application ID** e a **Client Key**.
-4. Copie `.env.example` para um novo arquivo `.env` e substitua os valores:
-   ```env
-   EXPO_PUBLIC_BACK4APP_APP_ID=seu_application_id
-   EXPO_PUBLIC_BACK4APP_CLIENT_KEY=sua_client_key
-   EXPO_PUBLIC_BACK4APP_SERVER_URL=https://parseapi.back4app.com
-   ```
-5. Inicie com `npx expo start -c` e abra no Expo Go ou no navegador (pressionando `w`).
+2. As variáveis públicas do aplicativo Back4App da atividade já estão preenchidas no arquivo `.env` deste repositório.
+3. Inicie com `npx expo start -c` e abra no Expo Go ou no navegador (pressionando `w`).
 
-**Importante:** Use a **Client Key**, e nunca a REST API Key nem a Master Key no código do aplicativo. As variáveis `EXPO_PUBLIC_*` são embutidas no cliente e **não são segredos**. Configure as permissões de classe (CLP), ACL e políticas de senha no Back4App. Não envie o arquivo `.env` ao GitHub.
+Para usar outra aplicação Back4App, modifique apenas `EXPO_PUBLIC_BACK4APP_APP_ID` e `EXPO_PUBLIC_BACK4APP_CLIENT_KEY` no seu ambiente local.
+
+**Importante:** Use a **Client Key**, e nunca a REST API Key nem a Master Key no código do aplicativo. As variáveis `EXPO_PUBLIC_*` são embutidas no aplicativo cliente e **não são segredos**. Neste exercício, `.env` contém somente Application ID, Client Key e a URL pública, e foi versionado conforme solicitado. **O repositório é público**, portanto qualquer pessoa pode ver esses valores. Nunca publique a REST API Key ou Master Key. Configure as permissões de classe (CLP), ACL e políticas de senha no Back4App.
 
 ## Roteamento
 
