@@ -36,9 +36,9 @@ export default function LoginScreen() {
 
   return (
     <AuthShell
-      eyebrow="Bem-vindo de volta"
-      title="Entre na sua conta."
-      description="Acesse seu perfil com as credenciais cadastradas no Back4App.">
+      eyebrow="ACESSO / 01"
+      title={"Bem-vindo\nnovamente."}
+      description="Entre com seu usuário e senha para acessar suas informações.">
       {!back4appConfigured ? (
         <View style={authStyles.infoBox}>
           <Text style={authStyles.infoText}>Configure as variáveis do Back4App no arquivo .env para habilitar o acesso.</Text>
@@ -48,7 +48,7 @@ export default function LoginScreen() {
       <AuthField
         label="Nome de usuário"
         icon="person-outline"
-        placeholder="Seu usuário"
+        placeholder="Digite seu usuário"
         value={username}
         onChangeText={setUsername}
         autoCapitalize="none"
@@ -77,7 +77,7 @@ export default function LoginScreen() {
         disabled={busy}
         accessibilityRole="button"
         onPress={submit}>
-        {busy ? <ActivityIndicator color="#FFFFFF" /> : <Text style={authStyles.submitText}>Entrar na conta  →</Text>}
+        {busy ? <ActivityIndicator color="#FFFFFF" /> : <Text style={authStyles.submitText}>Entrar na conta   ↗</Text>}
       </Pressable>
       <View style={authStyles.bottomRow}>
         <Text style={authStyles.secondary}>Ainda não tem uma conta?</Text>

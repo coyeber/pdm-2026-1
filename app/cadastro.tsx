@@ -60,9 +60,9 @@ export default function CadastroScreen() {
 
   return (
     <AuthShell
-      eyebrow="Primeiro acesso"
-      title="Crie sua conta."
-      description="Seus dados serão cadastrados na classe User do Parse Server.">
+      eyebrow="CADASTRO / 02"
+      title={"Seu espaço\ncomeça aqui."}
+      description="Preencha seus dados para criar uma conta e acessar sua área pessoal.">
       {error ? <View style={authStyles.errorBox}><Text style={authStyles.errorText}>{error}</Text></View> : null}
       <AuthField
         label="Nome completo"
@@ -77,7 +77,7 @@ export default function CadastroScreen() {
       <AuthField
         label="Nome de usuário"
         icon="person-outline"
-        placeholder="Como deseja ser identificado"
+        placeholder="Escolha um nome de usuário"
         value={username}
         onChangeText={setUsername}
         autoCapitalize="none"
@@ -125,7 +125,7 @@ export default function CadastroScreen() {
         onPress={submit}
         disabled={busy}
         accessibilityRole="button">
-        {busy ? <ActivityIndicator color="#FFFFFF" /> : <Text style={authStyles.submitText}>Criar minha conta  →</Text>}
+        {busy ? <ActivityIndicator color="#FFFFFF" /> : <Text style={authStyles.submitText}>Criar minha conta   ↗</Text>}
       </Pressable>
       <View style={authStyles.bottomRow}>
         <Text style={authStyles.secondary}>Já tem cadastro?</Text>
