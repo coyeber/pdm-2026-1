@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "y",
-    "slug": "y",
+    "name": "PDM Usuários",
+    "slug": "pdm-2026-1",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "y",
+    "scheme": "pdm20261",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

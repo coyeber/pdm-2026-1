@@ -41,3 +41,8 @@ app-example
 # generated native folders
 /ios
 /android
+
+# Dados locais do Back4App (nunca enviar credenciais)
+.env
+.env.*
+!.env.example
