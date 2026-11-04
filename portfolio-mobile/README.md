@@ -124,3 +124,18 @@ npx expo start --clear --tunnel
 ```
 
 Evite `--force` ou `--legacy-peer-deps`; o correto é resolver o conflito. Se houver outro erro, envie as primeiras linhas do terminal, não só a tela do iPhone.
+
+## Erro no EAS: react-native-web/dist/index não encontrado
+O EAS Update pode exportar iOS, Android **e web**. Expo Router requer dependências para web. O projeto agora declara `react-native-web`, `react-dom`, `@expo/metro-runtime`, `expo-linking` e `expo-constants` (compatíveis com SDK 58). Mantenha React e React DOM ambos na versão 19.3.0.
+
+Dentro da pasta do app, execute:
+
+```powershell
+npm install
+npx expo install --fix
+npx expo export --platform web
+# Se a exportação finalizar sem erro:
+eas update --channel preview --message "Portfolio Sergio Cruz"
+```
+
+Se estiver baixando o repositório inteiro, entre em `portfolio-mobile` antes dos comandos. O link de atualização do EAS não é necessariamente um QR instalável diretamente no Expo Go; confirme o tipo de link exigido com a organização do professor.
