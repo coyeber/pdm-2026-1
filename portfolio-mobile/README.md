@@ -105,3 +105,6 @@ Tecnologias: React Native, Expo, Expo Router, TypeScript, API REST do Parse, Bac
 ## Sobre a autoria
 
 Projeto acadêmico individual. Dados biográficos e projetos devem ser revisados pelo aluno antes de submeter. Não copie ou submeta chaves privadas.
+
+## Corrigir Metro transformFile (SDK 58)
+Pare o Expo com Ctrl+C. No Windows execute `corrigir-metro.bat`. Alternativamente rode `npm install`, `npx expo install --fix` e `npx expo start --clear --tunnel`. A versão atual declara `babel-preset-expo` e fixa `expo-linear-gradient` e AsyncStorage. Caso continue, procure no terminal a mensagem `Failed to construct transformer` antes de `transformFile`.

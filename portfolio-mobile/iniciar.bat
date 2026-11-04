@@ -1,11 +1,10 @@
 @echo off
 chcp 65001 >nul
-echo Instalando dependencias do portfolio...
+cd /d "%~dp0"
 call npm install || goto :fail
 call npx expo install --fix || goto :fail
-echo Iniciando Expo Go para celular...
-call npx expo start --tunnel
+call npx expo start --clear --tunnel
 goto :eof
 :fail
-echo Erro na instalacao. Confira Node.js e sua conexao.
+echo Erro na instalacao.
 pause
