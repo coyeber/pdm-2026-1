@@ -108,3 +108,19 @@ Projeto acadêmico individual. Dados biográficos e projetos devem ser revisados
 
 ## Corrigir Metro transformFile (SDK 58)
 Pare o Expo com Ctrl+C. No Windows execute `corrigir-metro.bat`. Alternativamente rode `npm install`, `npx expo install --fix` e `npx expo start --clear --tunnel`. A versão atual declara `babel-preset-expo` e fixa `expo-linear-gradient` e AsyncStorage. Caso continue, procure no terminal a mensagem `Failed to construct transformer` antes de `transformFile`.
+
+## Corrigir npm ERESOLVE / Babel / Metro
+O Expo SDK 58 usa React 19.3.0. O projeto deve manter `react` e `react-dom` em **19.3.0** para evitar que npm resolva `react-dom@19.3.1` (que exige React 19.3.1). Se o `npm install` falhar, `babel-preset-expo` fica ausente e gera o erro secundário `transformFile`.
+
+No Windows, pare o Expo com `Ctrl+C` e execute `corrigir-metro.bat` na pasta do projeto. Ou faça manualmente:
+
+```powershell
+npm pkg set dependencies.react=19.3.0 dependencies.react-dom=19.3.0
+Remove-Item -Recurse -Force node_modules -ErrorAction SilentlyContinue
+Remove-Item -Force package-lock.json -ErrorAction SilentlyContinue
+npm install
+npx expo install --fix
+npx expo start --clear --tunnel
+```
+
+Evite `--force` ou `--legacy-peer-deps`; o correto é resolver o conflito. Se houver outro erro, envie as primeiras linhas do terminal, não só a tela do iPhone.
