@@ -1,0 +1,18 @@
+import React from 'react';
+import {Text,View,Pressable} from 'react-native';
+import {useRouter} from 'expo-router';
+import {Ionicons} from '@expo/vector-icons';
+import {Screen,Eyebrow,SectionTitle,HeroGradient,Action,Panel,sharePortfolio} from '../../components/UI';
+import {C} from '../../constants/theme';
+import {usePortfolio} from '../../context/PortfolioContext';
+export default function Home(){
+ const {portfolio,source,favorites}=usePortfolio(); const router=useRouter();
+ return <Screen>
+ <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between',marginBottom:22}}><Text style={{fontSize:23,fontWeight:'900',color:C.text,letterSpacing:-1}}>COYEBER<Text style={{color:C.lime}}>.</Text></Text><View style={{borderRadius:30,backgroundColor:C.surface2,paddingHorizontal:12,paddingVertical:8,flexDirection:'row',alignItems:'center',gap:7}}><View style={{height:7,width:7,borderRadius:4,backgroundColor:source==='back4app'?C.lime:'#FFC774'}}/><Text style={{fontSize:10,color:C.muted,fontWeight:'800'}}>{source==='back4app'?'ONLINE':'PORTFÓLIO'}</Text></View></View>
+ <HeroGradient><View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}><Eyebrow>OLÁ, EU SOU</Eyebrow><Ionicons name="sparkles-outline" size={25} color={C.lime}/></View><Text style={{fontSize:51,lineHeight:54,fontWeight:'900',letterSpacing:-2.8,color:C.text,marginTop:11}}>SÉRGIO<Text style={{color:C.lime}}>.</Text>{'\n'}CRUZ</Text><Text style={{fontSize:15,color:C.aqua,fontWeight:'700',marginTop:18}}>{portfolio.role}</Text><Text style={{color:C.muted,lineHeight:22,marginTop:12,fontSize:13}}>{portfolio.bio}</Text><View style={{flexDirection:'row',gap:9,marginTop:23,flexWrap:'wrap'}}><Action title="Meus projetos" icon="arrow-forward" onPress={()=>router.push('/projetos')} light/><Action title="Compartilhar" icon="share-social-outline" onPress={sharePortfolio}/></View></HeroGradient>
+ <View style={{flexDirection:'row',gap:10,marginBottom:13}}>{portfolio.stats.map((s,i)=><View key={i} style={{flex:1,paddingVertical:19,backgroundColor:C.surface,borderColor:C.line,borderWidth:1,borderRadius:18,alignItems:'center'}}><Text style={{fontSize:25,color:i===1?C.violet:C.lime,fontWeight:'900'}}>{s.value}</Text><Text style={{fontSize:9,marginTop:6,color:C.muted,textAlign:'center',paddingHorizontal:5}}>{s.label}</Text></View>)}</View>
+ <SectionTitle title="Explorar" aside="5 SEÇÕES"/>
+ {[{title:'Sobre mim',sub:'Tecnologias, habilidades e bastidores',icon:'code-slash-outline',href:'/sobre'}, {title:'Formação acadêmica',sub:'Universidade e trilha de aprendizado',icon:'school-outline',href:'/academica'}, {title:'Experiência profissional',sub:'Por onde já passei',icon:'briefcase-outline',href:'/profissional'}, {title:'Projetos em destaque',sub:`${portfolio.projects.length} projetos • ${favorites.length} salvos`,icon:'rocket-outline',href:'/projetos'}].map((item,i)=><Pressable key={item.href} onPress={()=>router.push(item.href as any)}><Panel style={{flexDirection:'row',alignItems:'center',marginBottom:10,padding:16}}><View style={{width:45,height:45,borderRadius:14,backgroundColor:i%2? '#2B263A':'#22352F',alignItems:'center',justifyContent:'center'}}><Ionicons name={item.icon as any} color={i%2?C.violet:C.lime} size={21}/></View><View style={{flex:1,marginLeft:13}}><Text style={{color:C.text,fontSize:14,fontWeight:'800'}}>{item.title}</Text><Text style={{color:C.muted,fontSize:11,marginTop:5}}>{item.sub}</Text></View><Ionicons name="arrow-forward" color={C.muted} size={19}/></Panel></Pressable>)}
+ <Text style={{color:'#617082',textAlign:'center',fontSize:10,marginTop:16}}>DESENVOLVIDO POR COYEBER  ·  2026</Text>
+ </Screen>
+}

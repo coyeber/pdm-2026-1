@@ -1,0 +1,188 @@
+{
+  "name": "Sérgio Cruz",
+  "displayName": "SÉRGIO CRUZ",
+  "role": "Desenvolvedor Full Stack & Criador Digital",
+  "city": "Recife, Pernambuco",
+  "bio": "Transformo problemas reais em experiências digitais simples, inteligentes e bem construídas. Entre o código, a universidade e projetos com impacto, busco unir tecnologia, design e propósito.",
+  "email": "",
+  "github": "https://github.com/coyeber",
+  "website": "",
+  "stats": [
+    {
+      "value": "03",
+      "label": "Frentes de atuação"
+    },
+    {
+      "value": "04",
+      "label": "Projetos em destaque"
+    },
+    {
+      "value": "∞",
+      "label": "Vontade de criar"
+    }
+  ],
+  "education": [
+    {
+      "id": "unicap",
+      "degree": "Sistemas para Internet",
+      "institution": "Universidade Católica de Pernambuco — UNICAP",
+      "period": "Em andamento",
+      "description": "Formação em desenvolvimento de software, programação orientada a objetos, redes, bancos de dados, projetos integradores, metodologias ágeis e experiências mobile.",
+      "tags": [
+        "React Native",
+        "POO",
+        "Redes",
+        "Scrum"
+      ]
+    },
+    {
+      "id": "pratica",
+      "degree": "Aprendizado contínuo",
+      "institution": "Projetos, documentação e prática",
+      "period": "Contínuo",
+      "description": "Desenvolvimento prático com web e mobile, integração com APIs, versionamento, automações e publicação de aplicações.",
+      "tags": [
+        "Git",
+        "APIs REST",
+        "UI/UX"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "recife",
+      "title": "Estagiário de Tecnologia da Informação",
+      "company": "Prefeitura do Recife",
+      "period": "Atual",
+      "description": "Atuação com banco de dados, front-end, integração de informações e apoio ao desenvolvimento de ferramentas para análise e acompanhamento de dados.",
+      "tags": [
+        "Banco de dados",
+        "Front-end",
+        "Dados"
+      ]
+    },
+    {
+      "id": "note",
+      "title": "Suporte e Manutenção de Computadores",
+      "company": "Note Info",
+      "period": "Experiência anterior",
+      "description": "Diagnóstico, manutenção de computadores e suporte técnico, com foco em resolução de problemas.",
+      "tags": [
+        "Hardware",
+        "Suporte",
+        "Diagnóstico"
+      ]
+    },
+    {
+      "id": "coyeber",
+      "title": "Criador e Desenvolvedor",
+      "company": "Coyeber",
+      "period": "Projetos independentes",
+      "description": "Criação de soluções digitais, interfaces, aplicações e produtos próprios.",
+      "tags": [
+        "Web",
+        "Mobile",
+        "Design"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "supercopa",
+      "title": "Supercopa UNICAP",
+      "category": "Web",
+      "year": "2026",
+      "description": "Plataforma de inscrição, organização e administração de equipes e modalidades esportivas da universidade.",
+      "tags": [
+        "React",
+        "Next.js",
+        "Gestão"
+      ],
+      "link": "https://github.com/coyeber/unicap-esporte",
+      "accent": "#A78BFA"
+    },
+    {
+      "id": "painel",
+      "title": "Painel CAP BANC",
+      "category": "Dados",
+      "year": "2026",
+      "description": "Dashboard educacional com indicadores por RPA, cargos, unidades, professores efetivos e contratados.",
+      "tags": [
+        "JavaScript",
+        "Google Sheets",
+        "Dashboards"
+      ],
+      "link": "",
+      "accent": "#66E7C4"
+    },
+    {
+      "id": "place",
+      "title": "Place Brokers",
+      "category": "Full Stack",
+      "year": "2026",
+      "description": "Projeto integrador com API Express, banco PostgreSQL e interfaces conectadas ao back-end.",
+      "tags": [
+        "Express",
+        "PostgreSQL",
+        "REST"
+      ],
+      "link": "",
+      "accent": "#FFBF80"
+    },
+    {
+      "id": "mobile",
+      "title": "Aplicativo Mobile — Parse",
+      "category": "Mobile",
+      "year": "2026",
+      "description": "Aplicação em React Native + Expo com telas de autenticação e integração ao Back4App/Parse.",
+      "tags": [
+        "React Native",
+        "Expo",
+        "Back4App"
+      ],
+      "link": "https://github.com/coyeber/pdm-2026-1",
+      "accent": "#89B4FF"
+    }
+  ],
+  "skills": [
+    {
+      "label": "Mobile",
+      "items": [
+        "React Native",
+        "Expo",
+        "Expo Router"
+      ]
+    },
+    {
+      "label": "Front-end",
+      "items": [
+        "React",
+        "Next.js",
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "label": "Back-end e dados",
+      "items": [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Back4App",
+        "Parse",
+        "Google Sheets API"
+      ]
+    },
+    {
+      "label": "Ferramentas",
+      "items": [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Figma",
+        "Scrum"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+ATIVIDADE CURRÍCULO / PORTFÓLIO — SÉRGIO CRUZ
+
+GITHUB: https://github.com/coyeber/pdm-2026-1/tree/main/portfolio-mobile
+EXPO: [PENDENTE — requer login e publicação no Expo da organização do professor]
+YOUTUBE: [PENDENTE — grave até 1 minuto em dispositivo/emulador]
+
+O portfólio usa o mesmo Back4App da atividade anterior.
+No computador: npm install && npx expo install --fix && npm run seed && npx expo start --tunnel
+Se o seed falhar por permissão, consulte o README para executar com chave REST apenas localmente.
+No app, Sobre > Atualizar dados deve mostrar Back4App conectado.
+
+NÃO entregue o QR local do Metro. Use EAS Update/Preview da organização do professor e valide no Expo Go.

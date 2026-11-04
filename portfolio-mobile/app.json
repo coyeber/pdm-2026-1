@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Sérgio Cruz | Portfólio",
+    "slug": "sergio-cruz-portfolio",
+    "scheme": "sergiocruz",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#090C15",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#090C15"
+      }
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
